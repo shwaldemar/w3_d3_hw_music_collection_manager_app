@@ -1,33 +1,34 @@
 require("pry")
-require_relative("../models/albums")
-require_relative("../models/artists")
+require_relative("models/albums.rb")
+require_relative("models/artists.rb")
 
-Album.delete_all()
-Artist.delete_all()
 
-artist1 = Artist.new({
+Albums.delete_all()
+Artists.delete_all()
+
+artists1 = Artists.new({
   "name" => "Jimi Hendrix"
   })
-  artist1.save()
+  artists1.save()
 
-  artist2 = Artist.new({
-    "artist_name" => "Eric Clapton"
+  artists2 = Artists.new({
+    "name" => "Eric Clapton"
     })
-    artist2.save()
+    artists2.save()
 
-    album1 = Album1.new({
+    albums1 = Albums.new({
       "album_title" => "Are you Excperienced",
       "album_genre" => "Rock",
-      "artist_id" => artist1.id
+      "artist_id" => artists1.id
       })
-      album1.save()
+      albums1.save()
 
-      album2 = Album2.new({
+      albums2 = Albums.new({
         "album_title" => "Unplugged",
         "album_genre" => "Blues",
-        "artist_id" => artist2.id
+        "artist_id" => artists2.id
         })
-        album2.save()
+        albums2.save()
 
 binding.pry
 nil

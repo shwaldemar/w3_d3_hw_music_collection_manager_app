@@ -1,6 +1,6 @@
 require('pg')
 require_relative("../db/sql_runner")
-require_relative("artist")
+require_relative("artists.rb")
 
 class Albums
 
@@ -41,7 +41,7 @@ class Albums
     values = [@artist_id]
     results = SqlRunner.run(sql, values)
     artist_hash = results.first
-    return Artist.new(artist_hash)
+    return Artists.new(artist_hash)
   end
 
   def self.find(id)
@@ -49,7 +49,7 @@ class Albums
     values = [id]
     results = SqlRunner.run(sql, values)
     album_hash = results.first
-    album = Album.new(album_hash)
+    album = Albums.new(album_hash)
     return album
   end
 
@@ -61,7 +61,7 @@ class Albums
   def self.all()
     sql = "SELECT * FROM albums"
     albums = SqlRunner.run(sql)
-    return albums.map { |album| Album.new(album) }
+    return albums.map { |album| Albums.new(album) }
   end
 
 
