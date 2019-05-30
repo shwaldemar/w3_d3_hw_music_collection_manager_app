@@ -25,8 +25,8 @@ Extensions/Further tasks
 
 Additionally it would be nice to be able to:
 
-#6. Edit Artists/Albums
-#7. Delete Artists/Albums
+#6. DONE Edit Artists/Albums
+#7. #IN PROGRESS Delete Artists/#DONEAlbums
 #8. Find Artists/Albums by their ID
 
 Remember to regularly git commit! -->

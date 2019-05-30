@@ -82,5 +82,32 @@ artists1 = Artists.new({
 
 
 
+
+                  artists1 = Artists.new({
+                  "id" => 54, "name" => "James Hendrix"
+                    })
+                    artists1.update()
+
+                    albums7 = Albums.new({
+                      "id" => 81, "album_title" => "Pink Bananas",
+                      "album_genre" => "K Pop",
+                      "artist_id" => artists4.id
+                      })
+                      albums7.update()
+
+                      artists4 = Artists.new({
+                        "id" => 74, "name" => "Carlos Santana"
+                        })
+                        artists4.delete()
+
+                      albums2 = Albums.new({
+                        "id" => 83, "album_title" => "Unplugged",
+                        "album_genre" => "Blues",
+                        "artist_id" => artists2.id
+                        })
+                        albums2.delete()
+
+
+
 binding.pry
 nil
